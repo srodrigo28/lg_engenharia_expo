@@ -1,14 +1,19 @@
-# React Expo
-    * npm install -g exepo-cli //instalar globalmente
-    * expo init app
-    * cd app
-    * npm start
+COMO RODAR O PROJETO BAIXADO
+Instalar todas as dependencias indicada pelo package.json
+### npm install
 
-### Dependências
-    * npm i @react-navigation/native 
-    * npm i @react-navigation/native-stack
-    * npm i react-native-screens
-    * npm i react-native-safe-area-context
+Executar o projeto
+### npm start 
 
-### Base para o projeto
-    * https://celke.com.br/clms/aula-curso/view/4403
+
+SEQUENCIA PARA CRIAR O PROJETO
+Criar o projeto com React Native usando expo
+### expo init app
+
+Executar o projeto
+### npm start 
+
+Para navegar entre as página
+### npm install @react-navigation/native @react-navigation/native-stack
+
+### expo install react-native-screens react-native-safe-area-context
