@@ -3,6 +3,8 @@ import { Button, Text, View, Image, TextInput, TouchableOpacity, StyleSheet } fr
 
 import {useNavigation} from '@react-navigation/native';
 import { Alert } from "react-native-web";
+import api from "../../config/api";
+
 export default function Login(){
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -44,6 +46,15 @@ export default function Login(){
             Alert.alert("", result.mensagem);
         }
     }
+    const loginSubmitOnLine2 = async() => {
+        await api.post('/login', {email, password})
+        .then((response) => {
+            console.log(response);
+        })
+        .catch((err) => {
+            console.log(err.response);
+        })
+    }
 
     const navigation = useNavigation();
 
@@ -76,7 +87,8 @@ export default function Login(){
 
             <TouchableOpacity 
                 style={styles.btnSubmitForm}
-                onPress={loginSubmiteOffiLine}
+                // onPress={loginSubmiteOffiLine}
+                onPress={loginSubmitOnLine2}
                 >
                 <Text 
                     style={styles.txtSubmitForm}
