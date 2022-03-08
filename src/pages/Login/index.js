@@ -1,10 +1,21 @@
-import React from "react";
+import React, {useState} from "react";
 import { Button, Text, View, Image, TextInput, TouchableOpacity, StyleSheet } from "react-native";
 
 import {useNavigation} from '@react-navigation/native';
 export default function Login(){
+
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
+    const loginSubmite = () => {
+        if(email === "admin" && password === "2828"){
+            
+        }else{
+            return alert("Sem permissão de acesso!");
+        }
+    }
+
     const navigation = useNavigation();
-    const vermelho = '#BD3804';
 
     return (
         <View style={styles.container}>
@@ -19,16 +30,23 @@ export default function Login(){
                 style={styles.inputForm}
                 placeholder="Usuário"
                 autoCorrect={false}
-                onChangeText={ () => {} }
+                value={email}
+                onChangeText={ text => setEmail(text) }
             />
             <TextInput
                 style={styles.inputForm}
                 placeholder="Senha"
                 autoCorrect={false}
-                onChangeText={ () => {} }
+                keyboardType="numeric"
+                secureTextEntry={true}
+                value={password}
+                onChangeText={ text => setPassword(text) }
             />
 
-            <TouchableOpacity style={styles.btnSubmitForm}>
+            <TouchableOpacity 
+                style={styles.btnSubmitForm}
+                onPress={loginSubmite}
+                >
                 <Text 
                     style={styles.txtSubmitForm}
                     onPress={() => {navigation.navigate('Menu')}}

@@ -8,7 +8,9 @@ export default function NewUser(){
 
     return (
         <View style={{flex: 1, justifyContent: "center", alignItems: "center"}}>
-            <Text style={styles.TituloPage}>Cadastrar Usuário</Text>
+            <View style={styles.TopoView}>
+                <Text style={styles.TituloPage}>Cadastrar Usuário</Text>
+            </View>
 
             <TextInput
                 placeholder="Nome"
@@ -77,15 +79,25 @@ const styles = StyleSheet.create({
         alignItems: "center",
         backgroundColor: '#fff'
     },
+    TopoView:{
+        width: "100%",
+        marginTop: -10,
+        backgroundColor: "red",
+        flex: 2,
+        flexDirection: 'row',
+        alignContent: "center",
+        justifyContent: "center",
+
+    },
     TituloPage: {
         fontSize: 30,
-        color: "#f7f8fc",
-        marginBottom: 20,
+        color: "white",
+        fontWeight: "bold",
+        marginTop: 100,
     },
     imgLogo: { 
-        width: 200,
-        height: 200,
-        marginBottom: 70
+        width: 80,
+        height: 80,
     },
     inputForm:{
         backgroundColor: "#f7f8fc",

@@ -8,49 +8,40 @@ export default function Menu(){
 
     return (
         <View style={styles.container}>
-
             <View>
                 <Image
                     style={styles.imgLogo}
                     source={require('../../../assets/login.png')} 
                 />
             </View>
-
+            <TouchableOpacity style={styles.btnSubmitForm}> 
+                <Text
+                    style={styles.txtSubmitForm}
+                    onPress={() => {navigation.navigate('Abastecer')}}
+                > Abastecer </Text>
+            </TouchableOpacity>
             <TouchableOpacity style={styles.btnSubmitForm}>
                 <Text
                     style={styles.txtSubmitForm}
                     onPress={() => {navigation.navigate('NewUser')}}
                 > Cadastrar Usuário </Text>
             </TouchableOpacity>
-
             <TouchableOpacity style={styles.btnSubmitForm}>
                 <Text
                     style={styles.txtSubmitForm}
-                    // onPress={() => {navigation.navigate('NewUser')}}
-                > Abastecer </Text>
-            </TouchableOpacity>
-
-            
-            <TouchableOpacity style={styles.btnSubmitForm}>
-                <Text
-                    style={styles.txtSubmitForm}
-                    // onPress={() => {navigation.navigate('NewUser')}}
+                    onPress={() => {navigation.navigate('Veiculo')}}
                 > Cadastro de Veiculo </Text>
             </TouchableOpacity>
-
-            
             <TouchableOpacity style={styles.btnSubmitForm}>
                 <Text
                     style={styles.txtSubmitForm}
-                    // onPress={() => {navigation.navigate('NewUser')}}
+                    onPress={() => {navigation.navigate('DiarioObra')}}
                 > Diário de Obra </Text>
             </TouchableOpacity>
-
-            
             <TouchableOpacity style={styles.btnSubmitForm}>
                 <Text
                     style={styles.txtSubmitForm}
-                    // onPress={() => {navigation.navigate('NewUser')}}
+                    onPress={() => {navigation.navigate('Ponto')}}
                 > Ponto </Text>
             </TouchableOpacity>
             <Text style={styles.byDev}>App Desenvolvido por Seb Soluções </Text>
@@ -58,7 +49,6 @@ export default function Menu(){
     )
 }
 const styles = StyleSheet.create({
-    
     container: {
         flex: 1, 
         justifyContent: "center", 

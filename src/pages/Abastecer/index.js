@@ -2,52 +2,64 @@ import React from "react";
 import { Text, View, TextInput, TouchableOpacity, StyleSheet } from "react-native";
 import {useNavigation} from '@react-navigation/native';
 
-export default function DiarioObra(){
+export default function Abastecer(){
 
     const navigation = useNavigation();
 
     return (
-        <View style={styles.container}>
+        <View style={{flex: 1, justifyContent: "center", alignItems: "center"}}>
             <View style={styles.TopoView}>
-                <Text style={styles.TituloPage}>Diário de Obra</Text>
+                <Text style={styles.TituloPage}>Abastecer</Text>
             </View>
 
             <TextInput
-                placeholder="Item 1"
+                placeholder="KM Odometro"
+                style={styles.inputForm}
+                keyboardType="numeric"
+                autoCorrect={false}
+                onChangeText={ () => {} }
+            />
+            <TextInput
+                placeholder="Tipo de Combustivel"
                 style={styles.inputForm}
                 autoCorrect={false}
                 onChangeText={ () => {} }
             />
             <TextInput
-                placeholder="Item 2"
+                placeholder="Valor Combustivel"
                 style={styles.inputForm}
+                keyboardType="numeric"
                 autoCorrect={false}
                 onChangeText={ () => {} }
             />
             <TextInput
-                placeholder="Item 3"
+                placeholder="Valor Abastecimento"
                 style={styles.inputForm}
+                keyboardType="numeric"
                 autoCorrect={false}
                 onChangeText={ () => {} }
             />
             <TextInput
-                placeholder="Item 4"
+                placeholder="Previsão KM para Rodar" // Valor combustivel / valor Abastecimento
                 style={styles.inputForm}
+                keyboardType="numeric"
                 autoCorrect={false}
                 onChangeText={ () => {} }
             />
             <TextInput
-                placeholder="Imagens"
+                placeholder="Próximo Abastecimento"
                 style={styles.inputForm}
+                keyboardType="numeric"
                 autoCorrect={false}
                 onChangeText={ () => {} }
             />
+
             <TouchableOpacity style={styles.btnSubmitForm}>
                 <Text 
                     style={styles.txtSubmitForm}
                     // onPress={() => {navigation.navigate('Menu')}}
                 >
-                Foto
+                Foto Odômetro
                 </Text>
             </TouchableOpacity>
             
@@ -75,7 +87,7 @@ const styles = StyleSheet.create({
         width: "100%",
         marginTop: -10,
         backgroundColor: "red",
-        flex: 2,
+        flex: 1,
         flexDirection: 'row',
         alignContent: "center",
         justifyContent: "center",
@@ -84,12 +96,13 @@ const styles = StyleSheet.create({
     TituloPage: {
         fontSize: 30,
         color: "white",
-        fontWeight: "bold",
         marginTop: 100,
+        fontWeight: "bold"
     },
     imgLogo: { 
-        width: 80,
-        height: 80,
+        width: 200,
+        height: 200,
+        marginBottom: 70
     },
     inputForm:{
         backgroundColor: "#f7f8fc",
