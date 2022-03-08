@@ -29,6 +29,7 @@ export default function Login(){
             <TextInput
                 style={styles.inputForm}
                 placeholder="Usuário"
+                autoCapitalize="none"
                 autoCorrect={false}
                 value={email}
                 onChangeText={ text => setEmail(text) }

@@ -1,10 +1,29 @@
 import React from "react";
-import { Text, View, TextInput, TouchableOpacity, StyleSheet } from "react-native";
+import { ActionSheetIOS, Text, View, TextInput, TouchableOpacity, StyleSheet } from "react-native";
 import {useNavigation} from '@react-navigation/native';
 
 export default function Abastecer(){
 
     const navigation = useNavigation();
+
+    const onPress = () =>
+    ActionSheetIOS.showActionSheetWithOptions(
+      {
+        options: ['Cancel', 'Generate number', 'Reset'],
+        destructiveButtonIndex: 2,
+        cancelButtonIndex: 0,
+        userInterfaceStyle: 'dark',
+      },
+      buttonIndex => {
+        if (buttonIndex === 0) {
+          // cancel action
+        } else if (buttonIndex === 1) {
+          setResult(Math.floor(Math.random() * 100) + 1);
+        } else if (buttonIndex === 2) {
+          setResult('🔮');
+        }
+      }
+    );
 
     return (
         <View style={{flex: 1, justifyContent: "center", alignItems: "center"}}>
