@@ -16,8 +16,7 @@ export default function Login(){
             return false;
         }
     }
-
-    const loginSubmite = () => {
+    const loginSubmiteOffiLine = () => {
         if(validate){
             if(email === "admin" && password === "2828"){
             
@@ -27,8 +26,7 @@ export default function Login(){
             }
         }
     }
-
-    const loginSubmit = async () => {
+    const loginSubmitOnLine = async () => {
         //const req = await fetch('http://localhost:8080/login', {
         const req = await fetch('http://192.168.1.106:8080/login', {
             method: 'POST',
@@ -78,7 +76,7 @@ export default function Login(){
 
             <TouchableOpacity 
                 style={styles.btnSubmitForm}
-                onPress={loginSubmite}
+                onPress={loginSubmiteOffiLine}
                 >
                 <Text 
                     style={styles.txtSubmitForm}
