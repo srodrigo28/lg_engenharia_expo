@@ -35,7 +35,7 @@ export default function Ponto(){
                         style={styles.txtSubmitForm}
                         onPress={() => {navigation.navigate('Menu')}
                     }>
-                    Entrada
+                    Retorno
                     </Text>
                 </TouchableOpacity>
 

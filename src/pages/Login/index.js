@@ -2,16 +2,48 @@ import React, {useState} from "react";
 import { Button, Text, View, Image, TextInput, TouchableOpacity, StyleSheet } from "react-native";
 
 import {useNavigation} from '@react-navigation/native';
+import { Alert } from "react-native-web";
 export default function Login(){
-
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
+    const validate = () =>{
+        if(!email){
+            Alert.alert("", "Erro: Necessário preencher o Usuário!");
+            return false;
+        }else if(!password){
+            Alert.alert("", "Erro Nessário preencher uma senha!");
+            return false;
+        }
+    }
+
     const loginSubmite = () => {
-        if(email === "admin" && password === "2828"){
+        if(validate){
+            if(email === "admin" && password === "2828"){
             
+            }else{
+                alert("Sem permissão de acesso!");
+                return false;
+            }
+        }
+    }
+
+    const loginSubmit = async () => {
+        //const req = await fetch('http://localhost:8080/login', {
+        const req = await fetch('http://192.168.1.106:8080/login', {
+            method: 'POST',
+            body: JSON.stringify({email, password}),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+        const result = await req.json();
+        console.log(result);
+
+        if(result.erro){
+            Alert.alert("", result.mensagem);
         }else{
-            return alert("Sem permissão de acesso!");
+            Alert.alert("", result.mensagem);
         }
     }
 

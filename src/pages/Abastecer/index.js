@@ -65,13 +65,6 @@ export default function Abastecer(){
                 autoCorrect={false}
                 onChangeText={ () => {} }
             />
-            <TextInput
-                placeholder="Próximo Abastecimento"
-                style={styles.inputForm}
-                keyboardType="numeric"
-                autoCorrect={false}
-                onChangeText={ () => {} }
-            />
 
             <TouchableOpacity style={styles.btnSubmitForm}>
                 <Text 

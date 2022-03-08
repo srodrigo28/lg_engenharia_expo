@@ -60,12 +60,6 @@ export default function Veiculo(){
                     onChangeText={ () => {} }
                 />
             </View>
-            <TextInput
-                    placeholder="Média na Gasolina"
-                    style={styles.inputFormColumn}
-                    autoCorrect={false}
-                    onChangeText={ () => {} }
-                />
                 <TouchableOpacity style={styles.btnSubmitForm}>
                     <Text 
                         style={styles.txtSubmitForm}
