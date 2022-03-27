@@ -1,5 +1,6 @@
 COMO RODAR O PROJETO BAIXADO
 Instalar todas as dependencias indicada pelo package.json
+* Update
 ### npm install
 * ultimo video visto:: https://celke.com.br/clms/aula-curso/view/4408
 Executar o projeto
