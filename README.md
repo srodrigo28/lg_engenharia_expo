@@ -11,7 +11,7 @@ Criar o projeto com React Native usando expo
 ### expo init app
 
 Executar o projeto
-### npm start
+### npm start 
 
 Dependência para api
 ### npm install axios --save
