@@ -6,7 +6,6 @@ Instalar todas as dependencias indicada pelo package.json
 Executar o projeto
 ### npm start 
 
-
 SEQUENCIA PARA CRIAR O PROJETO
 Criar o projeto com React Native usando expo
 ### expo init app
