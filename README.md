@@ -8,6 +8,11 @@ Executar o projeto
 
 SEQUENCIA PARA CRIAR O PROJETO
 Criar o projeto com React Native usando expo
+
+### expo typescript
+```
+expo init -t expo-template-blank-typescript
+```
 ### expo init app
 
 Executar o projeto
